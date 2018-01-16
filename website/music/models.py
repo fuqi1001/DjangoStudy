@@ -23,8 +23,22 @@ class Album(models.Model):
         return self.album_title + ' - ' + self.artist
 
 
+''' add song 
+ #1 album1.song_set.create(song_title='lucky', file_type='mp3')
+ #2
+     song = Song()
+     song.album = album1
+     song.file_type = 'mp3'
+     song.song_title = 'i hate my boyfriend'
+     song.save()
+     Song.objects.all() 
+'''
 class Song(models.Model):
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
     file_type = models.CharField(max_length=10)
     song_title = models.CharField(max_length=250)
+
+    def __str__(self):
+        return self.song_title
+        
     
