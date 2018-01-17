@@ -1,0 +1,15 @@
+{% block body%}
+
+<!-- change object_list to album_list>
+{% if album_list %}
+    <h2>Here are all my albums</h2>
+    <ul>
+        {% for album in album_list %}
+        <li><a href="{% url 'music:detail' album.id %}">{{ album.album_title }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %} 
+    <h2>You don't have any albums</h2>
+{% endif %}
+{% endblock %}
+-->
