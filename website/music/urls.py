@@ -22,4 +22,7 @@ urlpatterns = [
 
     # /music/album/2/     delete
     path('album/<int:pk>/delete/', views.AlbumDelete.as_view(), name='album-delete'),
+
+    # register
+    path('register/', views.UserFormView.as_view(), name='register')
  ]
